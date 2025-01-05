@@ -1,9 +1,12 @@
-import './calcform.css';
+import React from 'react';
 
 function MonthlyIncomeField() {
 
   return (
-    <label>Ingresar ganancia mensual :D : <input type="text" /></label>
+    <React.Fragment>
+      <div>Ingresar ganancia mensual:</div>
+      <input type="text" />
+    </React.Fragment>
   );
 }
 

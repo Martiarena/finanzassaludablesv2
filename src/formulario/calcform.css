@@ -1,0 +1,63 @@
+.Calculadora {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 0.5em;
+}
+  
+.botones-calcular, .saludo {
+    grid-column: span 2 / span 2;
+}
+  
+.Calculadora label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+.Calculadora label div {
+    width: 100%;
+    max-width: 15em;
+}
+  
+.Calculadora label input {
+    width: 100%;
+    max-width: 25em;
+}
+  
+.Calculadora .form-end {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+.Calculadora .form-end .botones {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+input[type="button"], button[type="reset"], button {
+    background: white;
+    border: 0px solid;
+    padding: 10px 15px;
+    color: #005150;
+    font-weight: 700;
+    font-family: 'Edu TAS Beginner';
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input[type=text] {
+    background: transparent;
+    border: white 3px dotted;
+    color: yellow;
+    font-family: 'Edu TAS Beginner';
+    font-size: 1em;
+    padding: 3px 10px;
+}

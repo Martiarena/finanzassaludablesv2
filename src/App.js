@@ -1,5 +1,6 @@
 import './App.css';
 import Mainform from './formulario/Mainform.js';
+import Maintitle from './common/maintitle.js';
 
 function App() {
 
@@ -8,15 +9,13 @@ function App() {
   const email = <p>email@gmail.com</p>;
 
   return (
+    
     <div className={'fondo'}>
       <div className='App'>
         <header className="App-header">
-          <h1>
-            Finanzas Saludables
-          </h1>
+          <Maintitle />
         </header>
         <div>
-          Bienvenido {nombre}
           <Mainform />
         </div>
       </div>

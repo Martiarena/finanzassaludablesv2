@@ -1,12 +1,17 @@
-import './calcform.css';
+import React from 'react';
 
 function RelationshipField() {
 
   return (
-    <div>¿Tienes pareja o waifu?:
-      <input type="radio" id="soltero" name="estado" value="0" /><label for="soltero">Soltero pero feliz</label>
-      <input type="radio" id="relacion" name="estado" value="1" /><label for="relacion">Tengo waifu xd</label>
-    </div>
+    <React.Fragment>
+      <tr>
+        <td>¿Tienes pareja o waifu?:</td>
+        <td>
+          <input type="radio" id="soltero" name="estado" value="0" />Soltero pero feliz<br></br>
+          <input type="radio" id="relacion" name="estado" value="1" />Tengo waifu xd
+        </td>
+      </tr>
+    </React.Fragment>
   );
 }
 
