@@ -1,3 +1,8 @@
+.primary {
+    color: wheat;
+}
+
+/*-------------------- */
 .Calculadora {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -10,22 +15,12 @@
     grid-column: span 2 / span 2;
 }
   
-.Calculadora label {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-  
-.Calculadora label div {
-    width: 100%;
-    max-width: 15em;
-}
-  
-.Calculadora label input {
-    width: 100%;
-    max-width: 25em;
+.Calculadora .label-radio {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0.25em;
+    grid-row-gap: 0px;
 }
   
 .Calculadora .form-end {

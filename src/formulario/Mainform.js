@@ -4,17 +4,30 @@ import MonthlyIncomeField from './Monthlyincomefield.js';
 import RadioButtons from './Radiobuttons.js';
 import ResultCalculation from './Resultcalculation.js';
 
-function Mainform(){
+class Mainform extends Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <div className='Calculadora'>
-      <Greet name="Raul" heroName="Crimsondeath" />
-      <MonthlyIncomeField />
-      <RadioButtons description="¿Tienes pareja o waifu?:" id1="soltero" id2="relacion" nameradio="estado" option1="Soltero pero feliz" option2="Tengo waifu xd" />
-      <RadioButtons description="¿Buscas buen karma?:" id1="nokarma" id2="karma" nameradio="karma" option1="No creo en el Karma" option2="Si :D" />
-      <ResultCalculation></ResultCalculation>
-    </div>
-  );
+    this.state = {
+      MonthlyIncomeField: '',
+    }
+  }
+
+  handleSubmit = event => {
+    event.preventDefault()
+  }
+
+  render() {
+    return (
+      <form className='Calculadora' onSubmit={this.handleSubmit}>
+        <Greet name="Raul" heroName="Crimsondeath" />
+        <MonthlyIncomeField />
+        <RadioButtons description="¿Tienes pareja o waifu?:" />
+        <RadioButtons description="¿Buscas buen karma?:" />
+        <ResultCalculation />
+      </form>
+    )
+  }
 }
 
 export default Mainform;
